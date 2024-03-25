@@ -135,12 +135,17 @@
   )
 )
 
+(defpoll username :interval "100s"
+  "whoami")
+(defpoll hostname :interval "100s"
+  "cat /etc/hostname")
+
 (defwidget topcenter []
   (box :class "topcenter" :orientation "h" :halign "start" :spacing 10 :space-evenly "false"
     (image :class "pfp" :valign "start")
     (box :orientation "v" :space-evenly "false" :valign "center" :spacing 5
-      (label :class "welcometext" :text "vewu" :halign "start" :valign "center")
-      (label :text "vewu@inspiron3521" :halign "center" :halign "start" :valign "start" :style "color: #8aadf4")
+      (label :class "welcometext" :text username :halign "start" :valign "center")
+      (label :text "${username}@${hostname}" :halign "center" :halign "start" :valign "start" :style "color: #8aadf4")
       (label :text "${uptime}" :halign "start" :valign "start" :halign "start" :style "color: #8aadf4")
     )
   )
