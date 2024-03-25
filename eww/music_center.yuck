@@ -1,0 +1,33 @@
+(defwindow musiccenter
+  :monitor 0
+  :exclusive "false"
+  :windowtype "normal"
+  :stacking "overlay"
+  :geometry (geometry :x "0"
+                      :y "0"
+                      :width "100px"
+                      :height "50px"
+                      :anchor "bottom center")
+  :reserve (struts :side "right" :distance "4%")
+  (box :orientation "h" :space-evenly "false"
+    (box :class "musicart" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:84px; min-width: 84px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
+    (box :class "musiccontrols" :orientation "v" :space-evenly "false" :spacing 5
+      (label :class "musictitle" :text {musicshort} :valign "start" :halign "start")
+      (box :orientation "h"
+          :class "musicscale"
+          :space-evenly false
+          :halign "center"
+        (box :class "label" {musicposition})
+        (scale :min 0
+              :max 101
+              :value musicpositionpercentage)
+        (box :class "label" {musiclength})
+      )
+      (box :class "musicbuttons" :orientation "h" :halign "center" :spacing 30
+        (button :class "musicbutton" :onclick "playerctl previous &" "󰒮")
+        (button :class "musicbutton" :onclick "playerctl play-pause &" {playingorpaused != "Paused" ? "󰏤" : "󰐊" })
+        (button :class "musicbutton" :onclick "playerctl next &" "󰒭")
+      )
+    )
+  )
+)

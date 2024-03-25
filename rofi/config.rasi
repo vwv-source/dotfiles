@@ -1,0 +1,79 @@
+* {
+  /* Default background color */
+  background-color: transparent;
+  text-color:       #d6d6d6;
+  font: "JetBrainsMono Bold 10";
+}
+
+
+window {
+  x-offset: 0px;
+  y-offset: 0px;
+  location: south west;
+
+  padding: 15px 15px 5px 15px;
+  border-color: #d6d6d6;
+  border-radius: 0px 20px 0px 0px;
+  border: 0px;
+  background-color: #111111;
+  width:350px;
+}
+
+mainbox {
+  spacing: 0px;
+  children: [message,inputbar,listview];
+}
+
+element {
+  background: transparent;
+  children: [element-text];
+}
+
+inputbar {
+  background-color: transparent;
+  children: [entry];
+}
+
+
+listview, message {
+  padding: 10px;
+  background-color: transparent;
+
+  columns: 1;
+  lines: 10;
+}
+
+listview {
+  spacing: 7px;
+  background-color: #252525;
+  border-radius: 20px;
+  margin: 10px 0px 0px 0px;
+  scrollbar:    false;
+}
+
+element {
+    padding: 10px;
+    border-radius: 20px;
+}
+element normal.normal, element.alternate.normal{
+    background-color: transparent;
+    text-color:       #d6d6d6;
+}
+element.selected.normal {
+    background-color: #d6d6d6;
+    text-color:       #d6d6d6;
+}
+element-text.selected.normal {
+    background-color: #d6d6d6;
+    text-color:       black;
+}
+
+entry {
+    placeholder: "Start typing here!";
+    placeholder-color: gray;
+    background-color: #252525;
+    padding: 10px 15px;
+    text-color: #d6d6d6;
+    border-radius: 20px;
+    cursor-width: 0px;
+}
