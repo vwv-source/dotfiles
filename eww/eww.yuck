@@ -142,7 +142,7 @@
 
 (defwidget topcenter []
   (box :class "topcenter" :orientation "h" :halign "start" :spacing 10 :space-evenly "false"
-    (image :class "pfp" :valign "start")
+    (image :class "pfp" :valign "start" :style `background-image: url("/home/${username}/.config/pfp.png");` )
     (box :orientation "v" :space-evenly "false" :valign "center" :spacing 5
       (label :class "welcometext" :text username :halign "start" :valign "center")
       (label :text "${username}@${hostname}" :halign "center" :halign "start" :valign "start" :style "color: #8aadf4")
