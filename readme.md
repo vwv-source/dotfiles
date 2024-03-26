@@ -11,11 +11,15 @@ Here are my dotfiles because people keep asking for them ¯\\\_(ツ)_/¯<br>(ple
 
 ## Screenshots
 
-<img align="center" src="https://i.imgur.com/YZJaNo7.png" style="border-radius:5px; box-shadow: 0px 0px 20px #505050">
+<img align="center" src="https://i.imgur.com/YZJaNo7.png" style="box-shadow: 0px 0px 20px #505050">
 
 <br>
 
-<img align="center" src="https://i.imgur.com/0UtKpZX.png" style="border-radius:5px; box-shadow: 0px 0px 20px #505050">
+<img align="center" src="https://i.imgur.com/dWex6De.png" style="box-shadow: 0px 0px 20px #505050">
+
+<br>
+
+<img align="center" src="https://i.imgur.com/0UtKpZX.png" style="box-shadow: 0px 0px 20px #505050">
 
 ## Installation
 ### 1. Dependencies
@@ -47,4 +51,4 @@ One liner:<br>
 - switching to something cleaner than thunar
 - using something more "riceable" than dunst
 - notification center
-- light theme??
+- ~~light mode??~~

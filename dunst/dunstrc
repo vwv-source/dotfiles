@@ -7,9 +7,9 @@ notification_height = 0
 
 separator_height = 2
 
-padding = 8
-horizontal_padding = 8
-text_icon_padding = 0
+padding = 10
+horizontal_padding = 10
+text_icon_padding = 10
 frame_width = 2
 
 frame_color = "#252525"
@@ -40,8 +40,6 @@ show_indicators = yes
 min_icon_size = 0
 max_icon_size = 64
 
-icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/actions/:/usr/share/icons/Papirus-Dark/16x16/animations/:/usr/share/icons/Papirus-Dark/16x16/apps/:/usr/share/icons/Papirus-Dark/16x16/categories/:/usr/share/icons/Papirus-Dark/16x16/emblems/:/usr/share/icons/Papirus-Dark/16x16/emotes/:/usr/share/icons/Papirus-Dark/16x16/devices/mimetypes:/usr/share/icons/Papirus-Dark/16x16/panel/:/usr/share/icons/Papirus-Dark/16x16/places/
-
 dmenu = /usr/bin/wofi -p dunst:
 browser = /usr/bin/firefox --new-tab
 
@@ -55,7 +53,7 @@ foreground = "#CDD6F4"
 
 [urgency_normal]
 background = "#111111"
-foreground = "#FFFFFF"
+foreground = "#d6d6d6"
 highlight = "#d6d6d6"
 
 [urgency_critical]

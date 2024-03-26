@@ -73,7 +73,7 @@ entry {
     placeholder-color: gray;
     background-color: #252525;
     padding: 10px 15px;
-    text-color: #d6d6d6;
+    text-color: white;
     border-radius: 20px;
     cursor-width: 0px;
 }

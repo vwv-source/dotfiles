@@ -11,7 +11,7 @@
   :exclusive "false"
   :windowtype "normal"
   :stacking "fg"
-  :geometry (geometry :x "50"
+  :geometry (geometry :x "55"
                       :y "0"
                       :width "150px"
                       :height "40px"
@@ -145,8 +145,8 @@
     (image :class "pfp" :valign "start" :style `background-image: url("/home/${username}/.config/pfp.png");` )
     (box :orientation "v" :space-evenly "false" :valign "center" :spacing 5
       (label :class "welcometext" :text username :halign "start" :valign "center")
-      (label :text "${username}@${hostname}" :halign "center" :halign "start" :valign "start" :style "color: #8aadf4")
-      (label :text "${uptime}" :halign "start" :valign "start" :halign "start" :style "color: #8aadf4")
+      (label :text "${username}@${hostname}" :halign "center" :halign "start" :valign "start" :style "color: #1e66f5")
+      (label :text "${uptime}" :halign "start" :valign "start" :halign "start" :style "color: #1e66f5")
     )
   )
 )
@@ -162,12 +162,12 @@
     (box :spacing 10
       (button :class { networkstatus != "" ? "testenabled" : "test"} :onclick {networkstatus != "" ? "rfkill block wifi &" : "rfkill unblock wifi"} "󰤨  ")
       (button :class { bluetoothstatus != "no" ? "testenabled" : "test"}  :onclick {bluetoothstatus != "no" ? "bluetoothctl power off" : "bluetoothctl power on"}  "")
-      (button :class { nighttoggle != false ? "testenabled" : "test"} :onclick {nighttoggle != false ? "wlsunset -t 0 & eww update nighttoggle=false" : "wlsunset -t 5200 -S 0:00 -s 0:00 & eww update nighttoggle=true"} "")
+      (button :class { nighttoggle != false ? "testenabled" : "test"} :onclick {nighttoggle != false ? "wlsunset -t 0 & eww update nighttoggle=false" : "wlsunset -t 5200 -S 0:00 -s 0:00 & eww update nighttoggle=true"} "  ")
     )
     (box :spacing 10
       (button :class "test" :onclick "eww open actioncenter --toggle && ~/.config/scripts/screensht area &" "󰹑  ")
-      (button :class "test" :onclick "thunar ~/.local/share/Trash/files/ & eww open actioncenter --toggle &" "")
       (button :class "test" :onclick "thunar ~ & eww open actioncenter --toggle &" "")
+      (button :class "test" :onclick "bash lightmode.sh" "")
     )
   )
 )
