@@ -47,6 +47,7 @@ title = Dunst
 class = Dunst
 
 timeout = 3
+
 [urgency_low]
 background = "#111111"
 foreground = "#CDD6F4"
@@ -59,4 +60,4 @@ highlight = "#d6d6d6"
 [urgency_critical]
 background = "#111111"
 foreground = "#CDD6F4"
-frame_color = "#FFFFFF"
+frame_color = "#111111"

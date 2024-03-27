@@ -122,8 +122,9 @@
 (defwidget music []
   (button :class "music"
        :halign "center"
+       :style { music == "" ? "background-color:transparent" : ""}
        :onclick {ismusicopenornot != false ? `eww open musiccenter --toggle --no-daemonize & eww update ismusicopenornot=false` : ismusicopenornot != true ? `eww open musiccenter --no-daemonize & eww update ismusicopenornot=true` : "Nothing is currently playing."}
-      {ismusicopenornot != false ? "󰅖" : music != "" ? "  ${music}" : "Nothing is currently playing."}
+      {ismusicopenornot != false ? "󰅖" : music != "" ? "  ${music}" : ""}
   )
 )
 
@@ -166,7 +167,7 @@
     )
     (box :spacing 10
       (button :class "test" :onclick "eww open actioncenter --toggle && ~/.config/scripts/screensht area &" "󰹑  ")
-      (button :class "test" :onclick "thunar ~ & eww open actioncenter --toggle &" "")
+      (button :class "test" :onclick "thunar ~ & eww open actioncenter --toggle &" " ")
       (button :class "test" :onclick "bash lightmode.sh" "")
     )
   )
@@ -227,6 +228,28 @@
     pmoram
       :interval "1s"
         "date +%p")
+
+(defwindow notificationwidget
+  :monitor 0
+  :exclusive "true"
+  :windowtype "dialog"
+  :stacking "fg"
+  :geometry (geometry :x "0"
+                      :y "0"
+                      :width "200px"
+                      :height "75px"
+                      :anchor "bottom right")
+  :reserve (struts :side "right" :distance "4%")
+  (box :orientation "h" :space-evenly "false"
+    (box :orientation "v" :space-evenly "false" :valign "center" :class "notificationbox"
+      (box :spacing 10 :space-evenly "false"
+        (label :class "summary" :text "${notification.summary}" :halign "start")
+        (label :class "notificationicon" :text {notification.source == "Spotify" ? "" : notification.source == "VOLUME" ? "󰋋" : notification.source == "firefox" ? "󰈹" : ""} :halign "start")
+      )
+      (label :class "body" :text "${notification.body}" :halign "start")
+    )
+  )
+)
 
 (defwindow bar
   :monitor 0

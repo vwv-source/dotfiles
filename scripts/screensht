@@ -25,7 +25,7 @@ _FONT_='JetBrainsMonoNL-NFM-Bold'
 function check() {
     if [[ $? -eq 1 && ${PIPESTATUS[0]} -eq 1 ]]; then
         _end_job_=$(date +%s)
-        summary $_start_job_ $_end_job_ 'failed' && dunstify -u critical -t 3000 -a "Screenshot Tool" "Screensht" >> $_LOG_FILE_ 2>&1
+        summary $_start_job_ $_end_job_ 'failed' && dunstify -u critical -t 3000 -a "Screenshot Tool" "Screenshot Tool" "Screenshot cancelled or failed." >> $_LOG_FILE_ 2>&1
         exit 1
     fi
 }

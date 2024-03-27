@@ -31,10 +31,11 @@
 (defpoll music :interval "1s"
   "playerctl metadata --format '{{ title }} - {{ artist }}' || true")
 (defpoll musicshort :interval "1s"
-  `playerctl metadata --format '{{ title }}' | cut -c1-28`)
+  `playerctl metadata --format '{{ title }}' | cut -c1-30`)
 
 
 (defvar ismusicopenornot false)
-
 (defvar bluetoggle false)
 (defvar nighttoggle false)
+
+(defvar notification ``)

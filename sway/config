@@ -218,6 +218,7 @@ bindsym $mod+r mode "resize"
 exec eww open bar
 exec autotiling
 exec /usr/lib/polkit-kde-authentication-agent-1
+exec bash ~/.config/eww/tiramisupipe.sh
 
 #bindsym $mod+Shift+b exec killall -SIGUSR2 waybar
 bindsym Print exec ~/.config/scripts/screensht full

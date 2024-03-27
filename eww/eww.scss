@@ -1,6 +1,7 @@
 
 * {
   all: unset; //Unsets everything so you can style everything from scratch
+  font-weight: 600;
 }
 
 //Global Styles
@@ -74,7 +75,7 @@
 
 .workspaces button.focused, .workspaces button:hover {
   color: rgb(0, 0, 0);
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(245, 245, 245);
 }
 
 .launcher {
@@ -211,7 +212,7 @@
 .musicscale scale trough highlight {
   all: unset;
   background-color: #d6d6d6;
-  color: black;
+  color: white;
   border-radius: 10px;
   min-width: 10px;
 }
@@ -229,4 +230,28 @@
 .musicart{
   border: 2px solid #252525;
   background-image: unset;
+}
+
+.notificationwidget{
+  background-color:#111111;
+  border-radius:25px 0px 0px 0px;
+  padding: 10px 10px 5px 10px;
+}
+.notificationwidget{
+  color: white;
+}
+.notificationbox{
+  background-color: #252525;
+  min-width: 200px;
+  padding: 15px;
+  border-radius: 20px;
+}
+.notificationicon{
+  font-size: 18px;
+  padding-right: 20px;
+}
+
+.summary{
+  font-size: 20px;
+  font-weight: 600;
 }
