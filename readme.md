@@ -8,17 +8,19 @@ Here are my dotfiles because people keep asking for them ¯\\\_(ツ)_/¯<br>(ple
 - File Manager - `Thunar`
 - Browser - `Firefox`
 
+i do not recommend looking at the bash scripts that i made
+
 ## Screenshots
 
-<img align="center" src="https://i.imgur.com/IpZ3TPB.png" style="box-shadow: 0px 0px 20px #505050">
+<img align="center" src="https://i.imgur.com/glIERBo.png" style="box-shadow: 0px 0px 20px #505050">
 
 <br>
 
-<img align="center" src="https://i.imgur.com/r33VTqX.png" style="box-shadow: 0px 0px 20px #505050">
+<img align="center" src="https://i.imgur.com/8mRNDW4.png" style="box-shadow: 0px 0px 20px #505050">
 
 <br>
 
-<img align="center" src="https://i.imgur.com/I1mrt7H.png" style="box-shadow: 0px 0px 20px #505050">
+<img align="center" src="https://i.imgur.com/vZPIxbM.png" style="box-shadow: 0px 0px 20px #505050">
 
 ## Installation
 ### 1. Dependencies
@@ -49,5 +51,6 @@ One liner:<br>
 - changable accent color
 - switching to something cleaner than thunar
 - ~~using something more "riceable" than dunst~~
-- notification center
+- ~~notification center~~
+- ~~calendar~~
 - ~~light mode??~~

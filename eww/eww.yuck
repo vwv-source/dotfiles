@@ -204,6 +204,7 @@
 )
 
 (include "./music_center.yuck")
+(include "./calendar.yuck")
 (include "./variables.yuck")
 
 (defwidget time []
@@ -212,6 +213,7 @@
        :space-evenly false
        :valign "center"
     (button :onclick "eww open actioncenter --toggle --no-daemonize &"
+      :onrightclick "eww open calendarcenter --toggle --no-daemonize &"
     "${hours}:${minutes} ${pmoram}")
   )
 )
@@ -236,11 +238,11 @@
   :stacking "fg"
   :geometry (geometry :x "0"
                       :y "0"
-                      :width "200px"
-                      :height "75px"
+                      :width "0px"
+                      :height "0px"
                       :anchor "bottom right")
   :reserve (struts :side "right" :distance "4%")
-  (box :orientation "h" :space-evenly "false"
+  (revealer :transition "slideup" :duration "500ms" :reveal notificationreveal (box :orientation "h" :space-evenly "false"
     (box :orientation "v" :space-evenly "false" :valign "center" :class "notificationbox"
       (box :spacing 10 :space-evenly "false"
         (label :class "summary" :text "${notification.summary}" :halign "start")
@@ -248,7 +250,7 @@
       )
       (label :class "body" :text "${notification.body}" :halign "start")
     )
-  )
+  ))
 )
 
 (defwindow bar

@@ -39,3 +39,5 @@
 (defvar nighttoggle false)
 
 (defvar notification ``)
+(defvar notificationreveal false)
+(defvar notifsliteral "")

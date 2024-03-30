@@ -253,5 +253,59 @@
 
 .summary{
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.calendarcenter1{
+  color: white;
+  background-color: #111111;
+  border-radius: 25px 0px 0px 0px;
+  padding: 10px 10px 5px 10px;
+}
+.month{
+  margin: 0px 0px 10px 10px;
+  font-weight: 700;
+  font-size: 17px;
+}
+.calendar{
+  background-color: #252525;
+  min-width: 255px;
+  min-height: 285px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.calendardays label{
+  margin: -15px -15px;
+}
+.currentday, .calendardays label:hover{
+  border-radius: 20px;
+  color: black;
+  background-color: #d6d6d6;
+}
+
+.invalidday{
+  color: gray;
+}
+.daynames label{
+  margin: 0px -10px;
+}
+
+.notificationhistory{
+  color: white;
+  background-color: #111111;
+  min-width: 255px;
+  padding: 10px;
+  border-radius: 25px 0px 0px 25px;
+}
+
+
+.notifscroll{
+  min-height: 326px;
+}
+.notificationhistory button{
+  background-color: #252525;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 15px;
 }
