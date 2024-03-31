@@ -30,7 +30,7 @@
         :halign "center"    
         :orientation "v"
         :space-evenly "false"
-        (label :class "month" :text "March  -  2024" :halign "start")
+        (label :class "month" :text "${monthname}  -  2024" :halign "start")
         (box :class "actualcalendar" :orientation "v" :valign "center" :halign "center" :space-evenly "false"
             (literal :content calendarliteral)
         )

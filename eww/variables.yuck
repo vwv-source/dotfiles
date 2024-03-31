@@ -19,7 +19,7 @@
 
 
 (defpoll musicartlink :interval "1s"
-  `playerctl metadata --format "{{ mpris:artUrl }}"`)
+  `playerctl metadata --format "{{ mpris:artUrl }}" | sed 's/b273/1e02/'`)
 (defpoll musicposition :interval "1s"
   `playerctl metadata --format "{{ duration(position) }}"`)
 (defpoll musiclength :interval "10s"
@@ -41,3 +41,7 @@
 (defvar notification ``)
 (defvar notificationreveal false)
 (defvar notifsliteral "")
+
+(defpoll monthname :interval "2s"
+  "date +%B"
+)

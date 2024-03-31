@@ -2,15 +2,21 @@
 
 declare -a days
 monthlength=31
-endpadding=("1\" :class \"invalidday\"" "2\" :class \"invalidday\"" "3\" :class \"invalidday\"" "4\" :class \"invalidday\"" "5\" :class \"invalidday\"" "6\" :class \"invalidday\"" "7\" :class \"invalidday\"")
+endpadding=("1\" :class \"invalidday\"" "2\" :class \"invalidday\"" "3\" :class \"invalidday\"" "4\" :class \"invalidday\"" "5\" :class \"invalidday\"" "6\" :class \"invalidday\"" "7\" :class \"invalidday\"" "8\" :class \"invalidday\"" "9\" :class \"invalidday\"" "10\" :class \"invalidday\"" "11\" :class \"invalidday\"")
+su=()
+mo=("31\" :class \"invalidday\"")
+tu=("30\" :class \"invalidday\"" "31\" :class \"invalidday\"")
+we=("29\" :class \"invalidday\"" "30\" :class \"invalidday\"" "31\" :class \"invalidday\"")
+th=("28\" :class \"invalidday\"" "29\" :class \"invalidday\"" "30\" :class \"invalidday\"" "31\" :class \"invalidday\"")
 fr=("27\" :class \"invalidday\"" "28\" :class \"invalidday\"" "29\" :class \"invalidday\"" "30\" :class \"invalidday\"" "31\" :class \"invalidday\"")
+sa=("26\" :class \"invalidday\"" "27\" :class \"invalidday\"" "28\" :class \"invalidday\"" "29\" :class \"invalidday\"" "30\" :class \"invalidday\"" "31\" :class \"invalidday\"")
 
 
 # Get current date
 current_date=$(date +%A)
 
 # Get day number (separate call)
-day_number=$(date +%d)
+day_number=$(date +%-d)
 
 # Get month information
 month_name=$(date +%B)
@@ -31,7 +37,25 @@ done
 
 if [ $day_name == "Fr" ]; then
     days=("${fr[@]}" "${days[@]}")
-    echo "${days[34]}"
+
+elif [ $day_name == "Su" ]; then
+    days=("${su[@]}" "${days[@]}")
+
+elif [ $day_name == "Mo" ]; then
+    days=("${mo[@]}" "${days[@]}")
+
+elif [ $day_name == "Tu" ]; then
+    days=("${tu[@]}" "${days[@]}")
+
+elif [ $day_name == "We" ]; then
+    days=("${we[@]}" "${days[@]}")
+
+elif [ $day_name == "Th" ]; then
+    days=("${th[@]}" "${days[@]}")
+
+elif [ $day_name == "Sa" ]; then
+    days=("${sa[@]}" "${days[@]}")
+
 fi
     days=("${days[@]}" "${endpadding[@]}")
 
@@ -61,8 +85,8 @@ eww update calendarliteral="(box :orientation \"v\" :space-evenly \"false\" :spa
                                 ) \
                             )"
 
-echo "${days[@]}"
-echo "$(echo "$current_date" | cut -c1-2)"
-echo "$day_number"
-echo "$month_name"
-echo "$day_name"
+# echo "${days[@]}"
+# echo "$(echo "$current_date" | cut -c1-2)"
+# echo "$day_number"
+# echo "$month_name"
+# echo "$day_name"

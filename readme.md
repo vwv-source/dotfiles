@@ -25,23 +25,33 @@ i do not recommend looking at the bash scripts that i made
 ## Installation
 ### 1. Dependencies
 You need to install these dependencies using paru or your preferred AUR helper:<br>
-```paru -S swayfx eww dunst tiramisu wezterm rofi imagemagick playerctl polkit-kde-agent xdg-desktop-portal thunar thunar-archive-plugin noto-fonts noto-fonts-cjk ttf-jetbrains-mono-nerd papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-pulse pipewire-jack wireplumber gst-plugin-pipewire pavucontrol sensors rofi-bluetooth autotiling swaybg```
-<br><br>
+```
+paru -S swayfx eww dunst tiramisu wezterm rofi imagemagick playerctl polkit-kde-agent xdg-desktop-portal thunar thunar-archive-plugin noto-fonts noto-fonts-cjk ttf-jetbrains-mono-nerd papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-pulse pipewire-jack wireplumber gst-plugin-pipewire pavucontrol sensors rofi-bluetooth autotiling swaybg viewnior
+```
 Optional stuff:
 <br>
-```paru -S code firefox spotify-player-full```
-<br>
+```
+paru -S code firefox spotify-player-full
+```
+
 ### 2. Installing the Dotfiles
 Clone the repo:<br>
-```git clone https://github.com/vwv-source/dotfiles```<br><br>
-Move the config files to their appropiate locations:<br>
-```mv dotfiles/* ~/.config/```
-<br><br>
+```
+git clone https://github.com/vwv-source/dotfiles
+```
+Copy the config files to their appropiate locations:<br>
+```
+cp -r dotfiles/* ~/.config/
+```
 Delete the cloned repo folder:<br>
-```rm -rf dotfiles```<br>
+```
+rm -rf dotfiles
+```
 
 One liner:<br>
-```git clone https://github.com/vwv-source/dotfiles && mv dotfiles/* ~/.config/ && rm -rf dotfiles```<br>
+```
+git clone https://github.com/vwv-source/dotfiles && cp -r dotfiles/* ~/.config/ && rm -rf dotfiles
+```
 
 ## stuff in the future maybe
 - cleaning up the extremely messy eww files

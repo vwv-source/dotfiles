@@ -220,7 +220,7 @@ exec autotiling
 exec /usr/lib/polkit-kde-authentication-agent-1
 exec bash ~/.config/eww/tiramisupipe.sh
 exec watch exec bash ~/.config/eww/calendar.sh
-#exec watch -n 0.2 exec bash ~/.config/eww/notifhistory.sh
+exec watch -n 0.2 exec bash ~/.config/eww/notifhistory.sh
 
 #bindsym $mod+Shift+b exec killall -SIGUSR2 waybar
 bindsym Print exec ~/.config/scripts/screensht full
